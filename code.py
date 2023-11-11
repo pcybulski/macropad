@@ -101,10 +101,10 @@ while True:
         time.sleep(0.2)
         keyboard.release(Keycode.CONTROL, Keycode.W)
     if btn9.value:
-        print ("button 9 pressed, SPACEBAR")
-        keyboard.press(Keycode.SPACEBAR)
+        print ("button 9 pressed, ENTER")
+        keyboard.press(Keycode.ENTER)
         time.sleep(0.2)
-        keyboard.release(Keycode.SPACEBAR)
+        keyboard.release(Keycode.ENTER)
 
 
 
