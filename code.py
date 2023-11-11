@@ -13,7 +13,7 @@ btn5_pin = board.GP20
 btn6_pin = board.GP21
 btn7_pin = board.GP14
 btn8_pin = board.GP15
-
+btn9_pin = board.GP13
 
 keyboard = Keyboard(usb_hid.devices)
 
@@ -48,6 +48,10 @@ btn7.pull = digitalio.Pull.DOWN
 btn8 = digitalio.DigitalInOut(btn8_pin)
 btn8.direction = digitalio.Direction.INPUT
 btn8.pull = digitalio.Pull.DOWN
+
+btn9 = digitalio.DigitalInOut(btn9_pin)
+btn9.direction = digitalio.Direction.INPUT
+btn9.pull = digitalio.Pull.DOWN
 
 
 
@@ -96,6 +100,12 @@ while True:
         keyboard.press(Keycode.CONTROL, Keycode.W)
         time.sleep(0.2)
         keyboard.release(Keycode.CONTROL, Keycode.W)
+    if btn9.value:
+        print ("button 9 pressed, SPACEBAR")
+        keyboard.press(Keycode.SPACEBAR)
+        time.sleep(0.2)
+        keyboard.release(Keycode.SPACEBAR)
+
 
 
     time.sleep(0.1)
